@@ -5,14 +5,17 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto" *ngIf="accountServce.currentUser$ | async">
        <ng-container>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Matches </a>
+      <li class="nav-item">
+        <a class="nav-link" href="/members" routerLinkActive="link-active"
+        [routerLinkActiveOptions]="{ exact: true }" >members </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Lists</a>
+        <a class="nav-link" href="/Lists" routerLinkActive="link-active"
+        [routerLinkActiveOptions]="{ exact: true }" >Lists</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="/messages" routerLinkActive="link-active"
+        [routerLinkActiveOptions]="{ exact: true }" >Messages</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" (click)="logout()">logout</a>
@@ -22,8 +25,8 @@
        
         
       </ul>
-      <div class="dropdown" *ngIf="(accountServce.currentUser$ | async)" dropdown >
-          <a  class="dropdown-toggle text-light" dropdownToggle  >Welcome User</a>
+      <div class="dropdown" *ngIf="(accountServce.currentUser$ | async) as user" dropdown >
+          <a  class="dropdown-toggle text-light" dropdownToggle  >Welcome {{user.username}}</a>
           <div class="dropdown-menu" *dropdownMenu >
              <div class="dropdown-item">Edit Profile</div>
              <div class="dropdown-divider"></div>
