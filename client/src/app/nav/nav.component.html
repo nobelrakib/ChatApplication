@@ -3,8 +3,8 @@
    <div class="container">
     <a class="navbar-brand" href="#">Carousel</a>    
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto" *ngIf="accountServce.currentUser$ | async">
-       <ng-container>
+      <ul class="navbar-nav mr-auto" >
+       <ng-container  *ngIf="accountServce.currentUser$ | async">
       <li class="nav-item">
         <a class="nav-link" href="/members" routerLinkActive="link-active"
         [routerLinkActiveOptions]="{ exact: true }" >members </a>
@@ -21,6 +21,10 @@
           <a class="nav-link" (click)="logout()">logout</a>
         </li>
       </ng-container>
+      <li class="nav-item">
+        <a class="nav-link" href="/errors" routerLinkActive="link-active"
+        [routerLinkActiveOptions]="{ exact: true }" >Errors</a>
+      </li>
        
        
         
