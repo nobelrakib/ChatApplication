@@ -6,15 +6,15 @@
       <ul class="navbar-nav mr-auto" >
        <ng-container  *ngIf="accountServce.currentUser$ | async">
       <li class="nav-item">
-        <a class="nav-link" href="/members" routerLinkActive="link-active"
+        <a class="nav-link" routerLink="/members" routerLinkActive="link-active"
         [routerLinkActiveOptions]="{ exact: true }" >members </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/Lists" routerLinkActive="link-active"
+        <a class="nav-link" routerLink="/Lists" routerLinkActive="link-active"
         [routerLinkActiveOptions]="{ exact: true }" >Lists</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/messages" routerLinkActive="link-active"
+        <a class="nav-link" routerLink="/messages" routerLinkActive="link-active"
         [routerLinkActiveOptions]="{ exact: true }" >Messages</a>
       </li>
       <li class="nav-item">
@@ -22,7 +22,7 @@
         </li>
       </ng-container>
       <li class="nav-item">
-        <a class="nav-link" href="/errors" routerLinkActive="link-active"
+        <a class="nav-link" routerLink="/errors" routerLinkActive="link-active"
         [routerLinkActiveOptions]="{ exact: true }" >Errors</a>
       </li>
        

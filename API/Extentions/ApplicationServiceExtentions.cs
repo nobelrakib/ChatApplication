@@ -4,6 +4,7 @@ using API.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using AutoMapper;
 
 namespace API.Extentions
 {
@@ -14,6 +15,8 @@ namespace API.Extentions
             services.AddDbContext<DataContext>(options=>{
                     options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
+            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
+            services.AddScoped<IUserRepository,UserRepository>();
             services.AddScoped<ITokenService,TokenService>();
             
             return services;
