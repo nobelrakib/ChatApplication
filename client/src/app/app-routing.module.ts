@@ -6,6 +6,7 @@ import { TestErrorsComponent } from './errors/test-errors/test-errors.component'
 import { HomeComponent } from './home/home.component';
 import { ListsComponent } from './members/lists/lists.component';
 import { MemberDetailsComponent } from './members/member-details/member-details.component';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MessagesComponent } from './members/messages/messages.component';
 import { AuthGuard } from './_guards/auth.guard';
@@ -17,8 +18,9 @@ const routes: Routes = [
    runGuardsAndResolvers:'always',
    canActivate:[AuthGuard],
    children:[
-    {path:"members",component:MemberListComponent,canActivate:[AuthGuard]},
+    {path:"members",component:MemberListComponent},
     {path:"members/:username",component:MemberDetailsComponent},
+    {path:"member/edit",component:MemberEditComponent},
     {path:"lists",component:ListsComponent},
     {path:"messages",component:MessagesComponent},
    ],
@@ -26,9 +28,10 @@ const routes: Routes = [
 
   },
   {path:"errors",component:TestErrorsComponent},
+  
   {path:"not-found",component:NotFoundComponent},
   {path:"server-error",component:ServerErrorComponent},
-  {path:"**",component:NotFoundComponent,pathMatch:'full'},
+  {path:"**",component:NotFoundComponent,pathMatch:'full'}
 ];
 
 @NgModule({
