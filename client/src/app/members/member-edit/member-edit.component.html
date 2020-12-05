@@ -1,16 +1,15 @@
 <p>member-details works!</p>
-<div class="row">
+
+
+<div class="row" *ngIf="member">
     <div class="col-4">
         <h1>Your profile</h1>
     </div>
     <div class="col-8"  >
-        <div class="alert alert-info" *ngIf="editForm?.dirty" >
+        <div class="alert alert-info" *ngIf="editForm.dirty" >
             <strong>Information: </strong> You have made changes.  Any unsaved changes will be lost
         </div>
     </div>
-</div>
-
-<div class="row" *ngIf="member">
     <div class="col-4">
         <div class="card">
             <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}" 
