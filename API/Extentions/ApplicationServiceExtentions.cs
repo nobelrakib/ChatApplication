@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
+using API.Helper;
 
 namespace API.Extentions
 {
@@ -12,6 +13,7 @@ namespace API.Extentions
     {
         public static  IServiceCollection AddApplicationService(this IServiceCollection services,IConfiguration config)
         {
+            services.Configure<CloudnarySettings>(config.GetSection("CloudinarySettings"));
             services.AddDbContext<DataContext>(options=>{
                     options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
