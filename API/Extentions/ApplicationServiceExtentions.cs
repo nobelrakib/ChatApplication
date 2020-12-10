@@ -13,7 +13,8 @@ namespace API.Extentions
     {
         public static  IServiceCollection AddApplicationService(this IServiceCollection services,IConfiguration config)
         {
-            services.Configure<CloudnarySettings>(config.GetSection("CloudinarySettings"));
+            services.Configure<CloudinarySettings>(config.GetSection("CloudnarySettings"));
+            services.AddScoped<IPhotoService,PhotoService>();
             services.AddDbContext<DataContext>(options=>{
                     options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
