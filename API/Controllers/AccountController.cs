@@ -14,9 +14,10 @@ namespace API.Controllers
 {
     public class AccountController : BaseApiController
     {
-         private readonly DataContext _context;
-         private readonly IMapper _mapper;
+        private readonly DataContext _context;
+        private readonly IMapper _mapper;
         private readonly ITokenService _tokenService;
+        
         public AccountController(DataContext context, ITokenService tokenService,IMapper mapper)
         {
             _tokenService = tokenService;
@@ -43,7 +44,8 @@ namespace API.Controllers
             {
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user),
-                KnownAs = user.KnownAs
+                KnownAs = user.KnownAs,
+                Gender = user.Gender
             };
         }
 
@@ -65,12 +67,14 @@ namespace API.Controllers
                 if (computedHash[i] != user.PasswordHash[i]) return Unauthorized("Invalid password");
             }
 
+
             return new UserDto
             {
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user),
                 PhotoUrl=user.Photos.FirstOrDefault(x => x.IsMain)?.Url,
-                KnownAs = user.KnownAs
+                KnownAs = user.KnownAs,
+                Gender = user.Gender
             };
         }
 
