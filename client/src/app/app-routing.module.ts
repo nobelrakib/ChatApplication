@@ -22,7 +22,7 @@ const routes: Routes = [
     {path:"members",component:MemberListComponent},
     {path:"members/:username",component:MemberDetailsComponent},
     {path:"member/edit",component:MemberEditComponent,canDeactivate:[PreventUnsavedChangesGuard]},
-    {path:"lists",component:ListsComponent},
+    {path:"Lists",component:ListsComponent},
     {path:"messages",component:MessagesComponent},
    ],
    

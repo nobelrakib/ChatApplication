@@ -18,8 +18,10 @@ namespace API.Extentions
             services.AddDbContext<DataContext>(options=>{
                     options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
+            services.AddScoped<ILikesRepository, LikesRepository>();
             services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             services.AddScoped<IUserRepository,UserRepository>();
+             services.AddScoped<IMessageRepository, MessageRepository>();
             services.AddScoped<LogUserActivity>();
             services.AddScoped<ITokenService,TokenService>();
             
