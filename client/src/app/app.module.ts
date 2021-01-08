@@ -28,6 +28,7 @@ import { PhotoEditComponent } from './members/photo-edit/photo-edit.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DateInputComponent } from './_forms/date-input/date-input.component';
+import { MemberMessageComponent } from './members/member-message/member-message.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { DateInputComponent } from './_forms/date-input/date-input.component';
     MemberEditComponent,
     PhotoEditComponent,
     TextInputComponent,
-    DateInputComponent
+    DateInputComponent,
+    MemberMessageComponent
     
   ],
   imports: [
