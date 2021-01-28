@@ -15,6 +15,7 @@ namespace API.Controllers
 {
     public class AccountController : BaseApiController
     {
+        
         private readonly IMapper _mapper;
         private readonly ITokenService _tokenService;
         private readonly UserManager<AppUser> _userManager;

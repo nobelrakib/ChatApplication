@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using API.Extentions;
 using API.middleware;
+using API.SignalIR;
 
 namespace API
 {
@@ -32,6 +33,7 @@ namespace API
             services.AddApplicationService(Configuration);
             services.AddIdentityService(Configuration);
             services.AddCors();
+            services.AddSignalR();
             services.AddControllers();
         }
 
@@ -55,6 +57,8 @@ namespace API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<PresenceHub>("hubs/presence");
+                endpoints.MapHub<MessageHub>("hubs/message");
             });
         }
     }

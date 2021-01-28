@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
 using API.Helper;
+using API.SignalIR;
 
 namespace API.Extentions
 {
@@ -13,6 +14,7 @@ namespace API.Extentions
     {
         public static  IServiceCollection AddApplicationService(this IServiceCollection services,IConfiguration config)
         {
+            services.AddSingleton<PresenceTracker>();
             services.Configure<CloudinarySettings>(config.GetSection("CloudnarySettings"));
             services.AddScoped<IPhotoService,PhotoService>();
             services.AddDbContext<DataContext>(options=>{
