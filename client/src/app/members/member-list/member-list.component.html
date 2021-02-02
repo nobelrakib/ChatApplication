@@ -5,7 +5,9 @@
 
 <div class="container mt-3">
     <form #form="ngForm" class="form-inline mb-3" (ngSubmit)="loadMembers()" autocomplete="off">
-        <div class="form-group">
+       
+
+         <div class="form-group">
             <label>Age from: </label>
             <input type="number" class="form-control ml-1" style="width: 70px;" name="minAge" 
                 [(ngModel)]="userParams.minAge">
@@ -24,8 +26,10 @@
                     {{gender.display}}
                 </option>
             </select>
-        </div>
+        </div> 
 
+       
+        
         <button class="btn btn-primary ml-1" type="submit">Apply Filters</button>
         <button (click)="resetFilters()" class="btn btn-info ml-1" type="submit">Reset Filters</button>
         <div class="col">

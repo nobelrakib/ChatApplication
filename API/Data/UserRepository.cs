@@ -33,14 +33,16 @@ namespace API.Data
         public async Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams)
         {
             var query = _context.Users.AsQueryable();
+            
 
             query = query.Where(u => u.UserName != userParams.CurrentUsername);
             query = query.Where(u => u.Gender == userParams.Gender);
 
-            var minDob = DateTime.Today.AddYears(-userParams.MaxAge - 1);
-            var maxDob = DateTime.Today.AddYears(-userParams.MinAge);
+            
+          //  var minDob = DateTime.Today.AddYears(-userParams.MaxAge - 1);
+          //  var maxDob = DateTime.Today.AddYears(-userParams.MinAge);
 
-            query = query.Where(u => u.DateOfBirth >= minDob && u.DateOfBirth <= maxDob);
+          //  query = query.Where(u => u.DateOfBirth >= minDob && u.DateOfBirth <= maxDob);
 
             query = userParams.OrderBy switch
             {
@@ -70,6 +72,13 @@ namespace API.Data
             return await _context.Users
                 .Include(p => p.Photos)
                 .ToListAsync();
+        }
+
+         public async Task<string> GetUserGender(string username)
+        {
+            return await _context.Users
+                .Where(x => x.UserName == username)
+                .Select(x => x.Gender).FirstOrDefaultAsync();
         }
 
         public async Task<bool> SaveAllAsync()
