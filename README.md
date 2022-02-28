@@ -11,3 +11,5 @@
 <img width="954" alt="inbox" src="https://user-images.githubusercontent.com/53372696/155995057-c91ab130-6a12-4c5a-b0ee-93b6adf6861c.PNG">
 <img width="952" alt="outbox" src="https://user-images.githubusercontent.com/53372696/155995076-4196858e-89f1-42b0-ba4d-0fab55b1961a.PNG">
 <img width="945" alt="unread" src="https://user-images.githubusercontent.com/53372696/155995118-f1506a2e-29a7-4121-820e-b266ea714263.PNG">
+6.User can like other user
+![Screenshot (40)](https://user-images.githubusercontent.com/53372696/156009376-0ada08ef-c17f-406c-989a-00f0f07ff86c.png)
