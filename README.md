@@ -12,4 +12,8 @@
 <img width="952" alt="outbox" src="https://user-images.githubusercontent.com/53372696/155995076-4196858e-89f1-42b0-ba4d-0fab55b1961a.PNG">
 <img width="945" alt="unread" src="https://user-images.githubusercontent.com/53372696/155995118-f1506a2e-29a7-4121-820e-b266ea714263.PNG">
 6.User can like other user
-![Screenshot (40)](https://user-images.githubusercontent.com/53372696/156009376-0ada08ef-c17f-406c-989a-00f0f07ff86c.png)
+<img width="758" alt="like" src="https://user-images.githubusercontent.com/53372696/156010057-341a8ade-22fc-46ff-9f97-e396cec1769d.PNG">
+
+<img width="753" alt="like2" src="https://user-images.githubusercontent.com/53372696/156010097-895717bc-0d27-4c14-b53a-61b671d5b2a0.PNG">
+
+
