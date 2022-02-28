@@ -19,3 +19,6 @@
 
 
 <img width="753" alt="like2" src="https://user-images.githubusercontent.com/53372696/156011776-2370c51a-70ae-4c7c-90d7-0002299495de.PNG">
+
+7.When user sent message to another user it will give push notification
+<img width="753" alt="like2" src="https://user-images.githubusercontent.com/53372696/156014917-a614cf4c-7f2b-4fcf-aa15-b98609fc7646.png">
