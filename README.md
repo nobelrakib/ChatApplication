@@ -7,3 +7,7 @@
 <img width="950" alt="upload image" src="https://user-images.githubusercontent.com/53372696/155993010-1cab9459-6efc-4d4d-8375-9ba83623247e.PNG">
 4.User can send message to other user 
 <img width="944" alt="chat" src="https://user-images.githubusercontent.com/53372696/155993277-2e22979c-bb3b-457a-a660-7d26e700df5e.PNG">
+5.User can check his inbox,outbox or unread massege
+<img width="954" alt="inbox" src="https://user-images.githubusercontent.com/53372696/155995057-c91ab130-6a12-4c5a-b0ee-93b6adf6861c.PNG">
+<img width="952" alt="outbox" src="https://user-images.githubusercontent.com/53372696/155995076-4196858e-89f1-42b0-ba4d-0fab55b1961a.PNG">
+<img width="945" alt="unread" src="https://user-images.githubusercontent.com/53372696/155995118-f1506a2e-29a7-4121-820e-b266ea714263.PNG">
