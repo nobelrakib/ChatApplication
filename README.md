@@ -34,4 +34,5 @@
 <img width="902" alt="photo_management" src="https://user-images.githubusercontent.com/53372696/156088686-68b12d72-cc56-4922-ad40-664f37de07b6.PNG">
 
 11.When user is connected to internet a green sign will be shown
+
 <img width="94" alt="like (2)" src="https://user-images.githubusercontent.com/53372696/156093059-659a9af3-f0ef-4221-a47f-9e13e5f2d260.PNG">
