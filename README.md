@@ -29,3 +29,6 @@
 9.User and role management
 <img width="884" alt="user and role management" src="https://user-images.githubusercontent.com/53372696/156087936-e848c8f3-e9ba-497e-94be-aa48849a58c2.PNG">
 <img width="878" alt="edit" src="https://user-images.githubusercontent.com/53372696/156087971-4c536e44-1b1a-44a4-929c-8c5de5918c5c.PNG">
+
+10.Photo management: Admin will aprove photo and then user will use this photo as profile picture.
+<img width="902" alt="photo_management" src="https://user-images.githubusercontent.com/53372696/156088686-68b12d72-cc56-4922-ad40-664f37de07b6.PNG">
